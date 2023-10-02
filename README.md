@@ -19,7 +19,7 @@ A foreign key is a column (or set of columns) of data in one table that referenc
 A unique Key is a specific value that is employed to prevent identical values from appearing in a column. To avoid duplicate values, a unique key in a table's primary function is to prevent them. However, the primary key also contains it when it comes to a unique value.
 
 ## SQL Query
-Run the querries in file ![query.sql](query.sql)
+Run the queries in file [query.sql](query.sql)
 
 ### Outputs
 Customers table
@@ -27,6 +27,17 @@ Customers table
 
 Orders table
 ![orders](orders.png)
+
+## Reference
+
+|PRIMARY KEY|FOREIGN KEY|UNIQUE KEY|
+|:-----:|:-----:|:-------:|
+|Must contain unique values|Can contain duplicate values|Must contain unique values|
+|Can not contain NULL values|Can contain NULL values|Can contain a NULL value|
+|Only one per table|Can have more than one|Can have more than one|
+|To identify records in a table uniquely|To make a relation between 2 tables|To identify records when they cannot have duplicate values|
+
+https://www.postgresql.org/docs/current/sql-createtable.html
 
 ## Authors
 - Varsha
