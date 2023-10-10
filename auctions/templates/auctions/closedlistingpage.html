@@ -1,0 +1,49 @@
+{% extends "auctions/layout.html" %}
+{% block body %}
+<div class="container">
+    <!--show listing item-->
+    <h2>Listing:{{item.title}}</h2>
+    <div class="container" style="text-align: center;">
+        <img src="{{item.link}}" width="30%" alt="...">
+    </div>
+    <br>
+    <!--show item description-->
+    <p><b>Description:</b>{{item.description}}</p>
+
+    <br>
+    <p><b>Details:</b>
+    <ul>
+        <li><b>Owner:</b>{{closedbid.owner}}</li>
+        <li><b>Winning Bid:</b>${{closedbid.winprice}}</li>
+        <li><b>Winner:</b>{{closedbid.winner}}</li>
+
+    </ul>
+    <!--check if user is the winner then say congratulation-->
+    {% if closedbid.winner == user.username %}
+    <h4>Congratulations 🏆</h4>
+    <p>You won this bid.</p>
+    {% endif %}
+
+    {% if comments %}
+    <h3>Comments:</h3>
+    <div class="container">
+          <!--show all comments-->
+          {% for c in comments %}
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{c.user}}</h5>
+                  <p class="card-text">{{c.comment}}</p>
+                  <p class="card-text"><small class="text-muted">{{c.time}} UTC</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+           {% endfor %}
+           
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

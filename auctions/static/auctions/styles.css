@@ -1,0 +1,14 @@
+body {
+    padding: 10px;
+}
+
+main {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100vh; /* This ensures the body takes the full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
