@@ -22,14 +22,6 @@ B-tree indexes speed up certain queries compared to having no index. Especially 
 
 ## Keys to Uniqueness
 ![keys](/src/keys.png)
-### SUPER KEY
-Super key is a single key or a group of multiple keys that can uniquely identify tuples in a table.
-
-### CANDIDATE KEY
-A candidate key is a column or a combination of columns that uniquely identifies each row in a table.
-
-### ALTERNATIVE KEY
-Alternate keys are those candidate keys which are not the Primary key.
 
 ## Evolution of Database Key Creation
 Manual primary key assignment could lead to conflicts, data duplication, and human errors, making scaling databases more challenging.
@@ -78,8 +70,17 @@ A foreign key is a column (or set of columns) of data in one table that referenc
 ### UNIQUE KEY
 A unique Key is a specific value that is employed to prevent identical values from appearing in a column. To avoid duplicate values, a unique key in a table's primary function is to prevent them. However, the primary key also contains it when it comes to a unique value.
 
-## SQL Query
-Run the queries in file [query.sql](query.sql)
+### SUPER KEY
+Super key is a single key or a group of multiple keys that can uniquely identify tuples in a table.
+
+### CANDIDATE KEY
+A candidate key is a column or a combination of columns that uniquely identifies each row in a table.
+
+### ALTERNATIVE KEY
+Alternate keys are those candidate keys which are not the Primary key.
+
+## SQL Query demo
+Run the queries in file [query.sql](/src/query.sql)
 
 ### Outputs
 Customers table
